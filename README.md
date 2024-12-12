@@ -5,5 +5,5 @@
 - Install Express
 - Create .gitignore file
 - In App.js create server
-- <img src="./images/Screenshot2024-12-12121546.png" alt="Logo" width="100">
+- <img src="./images/Screenshot2024-12-12121546.png" alt="Logo" width="300">
 - ![serverimage](./images/Screenshot2024-12-12121546.png)
