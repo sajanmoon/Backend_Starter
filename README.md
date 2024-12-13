@@ -64,9 +64,8 @@
 - for eg we will write signup API
 - Here we will create new instance of User model by following image code
 - To make it dynamic we will use req.body
-
+- --------------------------------------------------------------------------------------
 - To make the API working import it in app.js
 - To convert the request data into JSON format add a middleware app.use(express.json())
 - Declare a router
 - Use the app.use("/") to direct the route to indivisual route
-
