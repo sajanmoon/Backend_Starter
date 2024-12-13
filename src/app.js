@@ -3,10 +3,16 @@ const connectDB = require("./config/dababase");
 
 const app = express();
 
-app.use("/hello", (req, res) => {
-  res.send("server is running ");
-});
+// Middleware to convert the request data into JSON format
+app.use(express.json());
 
+// Import the routes
+const authRouter = require("./routes/auth");
+
+// main routes for indivisual routes to direct to our route file
+app.use("/", authRouter);
+
+// Setting a PORT and a Database
 connectDB()
   .then(() => {
     console.log("Database connected succesfully");
@@ -14,6 +20,6 @@ connectDB()
       console.log("server is litening on port 3000");
     });
   })
-  .catch(() => {
-    console.log("Database cannot be connected");
+  .catch((err) => {
+    console.log("Database cannot be connected", err);
   });
