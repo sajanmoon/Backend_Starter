@@ -1,7 +1,11 @@
 const express = require("express");
 const connectDB = require("./config/dababase");
+const cors = require("cors");
 
 const app = express();
+
+// Here we are using to cors widdleware so that api can talk to frontend
+app.use(cors());
 
 // Middleware to convert the request data into JSON format
 app.use(express.json());
